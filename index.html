@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valsi | Pay-per-use food processing for small food businesses</title>
+<meta name="description" content="Valsi gives small food businesses affordable, pay-per-use access to food-processing equipment, packaging, quality testing and cold storage.">
+<style>
+:root{--g:#1f7a4d;--g2:#2fa36b;--o:#f39c32;--ink:#1d2b24;--mut:#5b6b63;--bg:#f7faf7;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid #e4ece6}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.5rem;color:var(--g);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{text-decoration:none;color:var(--mut);font-weight:500}
+nav ul a:hover{color:var(--g)}
+.btn{display:inline-block;background:var(--o);color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:999px;box-shadow:0 6px 18px rgba(243,156,50,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7);box-shadow:none}
+header.hero{background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.12) 0 120px,transparent 121px),radial-gradient(circle at 10% 90%,rgba(255,255,255,.08) 0 160px,transparent 161px),linear-gradient(135deg,#145c39,var(--g2));color:#fff;padding:90px 0 100px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:.85rem;margin-bottom:18px}
+.hero h1{font-size:3rem;line-height:1.15;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:#ffd08a}
+.hero p{font-size:1.15rem;opacity:.92;margin-bottom:30px;max-width:560px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hero-art div{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:26px 14px;text-align:center;font-size:2.4rem}
+.hero-art small{display:block;font-size:.9rem;margin-top:6px;font-weight:600}
+section{padding:80px 0}
+.eyebrow{color:var(--g2);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+h2{font-size:2.1rem;margin:6px 0 14px}
+.lead{color:var(--mut);max-width:680px;font-size:1.05rem}
+.grid{display:grid;gap:22px;margin-top:40px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border-radius:18px;padding:28px;box-shadow:0 4px 20px rgba(20,60,40,.06);border:1px solid #e8efe9}
+.card .ic{font-size:2rem;width:58px;height:58px;display:grid;place-items:center;border-radius:16px;background:#e8f5ee;margin-bottom:16px}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--mut);font-size:.97rem}
+.problem{background:#fff}
+.prob .card{border-left:5px solid var(--o)}
+.steps{counter-reset:s}
+.step{position:relative;padding-top:44px}
+.step:before{counter-increment:s;content:counter(s);position:absolute;top:-6px;left:28px;width:46px;height:46px;border-radius:50%;background:var(--g);color:#fff;font-weight:800;display:grid;place-items:center;font-size:1.2rem;transform:translateY(-30%)}
+.benefits{background:linear-gradient(180deg,#eef7f1,#f7faf7)}
+.pricing{text-align:center}
+.price-box{max-width:620px;margin:30px auto 0;background:#fff;border-radius:24px;padding:44px 30px;border:2px solid var(--g2);box-shadow:0 10px 30px rgba(31,122,77,.12)}
+.price-box .amt{font-size:2.8rem;font-weight:800;color:var(--g)}
+.price-box .amt small{font-size:1rem;color:var(--mut);font-weight:500}
+.price-box ul{list-style:none;margin:20px 0 28px;color:var(--mut)}
+.price-box li{padding:4px 0}
+.price-box li:before{content:"✓ ";color:var(--g2);font-weight:800}
+.team{background:#fff}
+.member{text-align:center}
+.avatar{width:84px;height:84px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-weight:800;font-size:1.6rem;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2))}
+.member .role{color:var(--o);font-weight:700;font-size:.92rem}
+.contact{background:linear-gradient(135deg,#145c39,var(--g2));color:#fff;text-align:center}
+.contact .lead{color:rgba(255,255,255,.9);margin:0 auto 30px}
+.mail{display:block;margin-top:18px;opacity:.9}
+footer{background:#0f3322;color:rgba(255,255,255,.75);text-align:center;padding:24px 0;font-size:.9rem}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:2.4rem}}
+@media(max-width:600px){nav ul{display:none}.g4{grid-template-columns:1fr}header.hero{padding:60px 0 70px}.hero h1{font-size:2rem}section{padding:60px 0}h2{font-size:1.7rem}.hero-art div{font-size:2rem;padding:18px 10px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="#top"><span>V</span>Valsi</a>
+<ul><li><a href="#services">Services</a></li><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#team">Team</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<span class="tag">🍲 Shared facilities for small food businesses</span>
+<h1>Make great food.<br><em>We'll help you scale.</em></h1>
+<p>Valsi gives home bakers, pickle and snack makers, and small food brands affordable, pay-per-use access to food-processing equipment, packaging, quality testing and cold storage.</p>
+<div class="cta"><a class="btn" href="#contact">Connect with Valsi</a><a class="btn ghost" href="#how">How it works</a></div>
+</div>
+<div class="hero-art">
+<div>⚙️<small>Processing</small></div>
+<div>📦<small>Packaging</small></div>
+<div>🔬<small>Quality testing</small></div>
+<div>❄️<small>Cold storage</small></div>
+</div>
+</div></header>
+
+<section class="problem"><div class="wrap">
+<span class="eyebrow">The problem</span>
+<h2>Growing a small food business is hard</h2>
+<p class="lead">Are you a small food business owner struggling with high equipment costs, inconsistent product quality, and limited production capacity? You're not alone.</p>
+<div class="grid g3 prob">
+<div class="card"><h3>💸 High equipment costs</h3><p>Commercial machinery needs a big upfront investment that most small businesses can't afford.</p></div>
+<div class="card"><h3>⚖️ Inconsistent quality</h3><p>Without proper equipment and testing, keeping every batch consistent and safe is a challenge.</p></div>
+<div class="card"><h3>📉 Limited capacity</h3><p>Home kitchens and small setups can't keep up when orders start growing.</p></div>
+</div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<span class="eyebrow">Our services</span>
+<h2>Everything you need, when you need it</h2>
+<p class="lead">Meet Valsi! Use professional facilities on demand, without buying them yourself.</p>
+<div class="grid g4">
+<div class="card"><div class="ic">⚙️</div><h3>Food-processing equipment</h3><p>Access grinders, mixers, ovens, roasters and more for your production runs.</p></div>
+<div class="card"><div class="ic">📦</div><h3>Packaging</h3><p>Pack your products neatly and hygienically so they're ready for market.</p></div>
+<div class="card"><div class="ic">🔬</div><h3>Quality &amp; safety testing</h3><p>Check your products for quality and food-safety standards with confidence.</p></div>
+<div class="card"><div class="ic">❄️</div><h3>Cold storage</h3><p>Store ingredients and finished goods at the right temperature.</p></div>
+</div>
+</div></section>
+
+<section id="how" style="background:#fff"><div class="wrap">
+<span class="eyebrow">How it works</span>
+<h2>Three simple steps</h2>
+<div class="grid g3 steps">
+<div class="card step"><h3>Book</h3><p>Choose the equipment or facility you need and book a time slot.</p></div>
+<div class="card step"><h3>Use</h3><p>Come in and produce, pack, test or store your products in our shared facility.</p></div>
+<div class="card step"><h3>Pay per use</h3><p>Pay only for the time you actually use. No long-term commitments.</p></div>
+</div>
+</div></section>
+
+<section class="benefits"><div class="wrap">
+<span class="eyebrow">Why Valsi</span>
+<h2>Grow your business with confidence</h2>
+<div class="grid g4">
+<div class="card"><div class="ic">🪙</div><h3>Lower upfront costs</h3><p>No heavy investment in your own machinery.</p></div>
+<div class="card"><div class="ic">⭐</div><h3>Better product quality</h3><p>Professional equipment for consistent results.</p></div>
+<div class="card"><div class="ic">🛡️</div><h3>Food safety</h3><p>Testing support to help you meet safety standards.</p></div>
+<div class="card"><div class="ic">🚀</div><h3>Scale easily</h3><p>Increase production as your orders grow.</p></div>
+</div>
+</div></section>
+
+<section class="pricing" id="pricing"><div class="wrap">
+<span class="eyebrow">Pricing</span>
+<h2>Simple, pay-per-use pricing</h2>
+<p class="lead" style="margin:0 auto">Pay only for what you use.</p>
+<div class="price-box">
+<div>Starting at</div>
+<div class="amt">Rs. 1,200 <small>/ machine-hour</small></div>
+<ul><li>No upfront machinery investment</li><li>Book only the hours you need</li><li>Access to processing, packaging, testing and storage</li></ul>
+<a class="btn" href="#contact">Get started</a>
+</div>
+</div></section>
+
+<section class="team" id="team"><div class="wrap">
+<span class="eyebrow">Our team</span>
+<h2>The people behind Valsi</h2>
+<p class="lead">We're students at IIIT Sri City, building Valsi to help small food businesses grow.</p>
+<div class="grid g3">
+<div class="card member"><div class="avatar">PP</div><h3>B S Poorvaj Pranav</h3><div class="role">Founder &amp; CEO</div></div>
+<div class="card member"><div class="avatar">KB</div><h3>Kainuru Balaji</h3><div class="role">Co-Founder &amp; CTO</div></div>
+<div class="card member"><div class="avatar">SH</div><h3>Ponnuru Sai Harsha</h3><div class="role">Co-Founder &amp; CFO</div></div>
+</div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<h2>Interested? Reach out to the Valsi team</h2>
+<p class="lead">With Valsi, you focus on making great products while we help you access the facilities to scale. Ready to take the next step?</p>
+<a class="btn" href="mailto:saiharsha.p23@iiits.in?subject=Interested%20in%20Valsi">Email us</a>
+<a class="mail" href="mailto:saiharsha.p23@iiits.in">saiharsha.p23@iiits.in</a>
+</div></section>
+
+<footer>© 2026 Valsi. Shared food-processing facilities for small food businesses.</footer>
+</body>
+</html>
