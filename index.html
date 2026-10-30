@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%231f7a4d%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2738%27 font-family=%27Arial%27 font-weight=%27bold%27 fill=%27white%27 text-anchor=%27middle%27%3EV%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#1f7a4d">
 <title>Valsi | Pay-per-use food processing for small food businesses</title>
 <meta name="description" content="Valsi gives small food businesses affordable, pay-per-use access to food-processing equipment, packaging, quality testing and cold storage.">
 <style>
@@ -66,12 +68,23 @@ h2{font-size:2.1rem;margin:6px 0 14px}
 footer{background:#0f3322;color:rgba(255,255,255,.75);text-align:center;padding:24px 0;font-size:.9rem}
 @media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:2.4rem}}
 @media(max-width:600px){nav ul{display:none}.g4{grid-template-columns:1fr}header.hero{padding:60px 0 70px}.hero h1{font-size:2rem}section{padding:60px 0}h2{font-size:1.7rem}.hero-art div{font-size:2rem;padding:18px 10px}}
+html,body{overflow-x:hidden}
+.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.menu-btn i{display:block;width:24px;height:3px;border-radius:2px;background:var(--g);margin:4px 0;transition:.25s}
+@media(max-width:600px){.menu-btn{display:block}nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid #e4ece6;box-shadow:0 10px 20px rgba(0,0,0,.08)}nav ul li a{display:block;padding:14px 22px;border-top:1px solid #eef3ef}body.menu-open nav ul{display:flex}body.menu-open .menu-btn i:nth-child(1){transform:translateY(7px) rotate(45deg)}body.menu-open .menu-btn i:nth-child(2){opacity:0}body.menu-open .menu-btn i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}}
+section,header{scroll-margin-top:64px}
+.step{padding-top:84px}.step:before{top:24px!important;transform:none!important}
+a,button{-webkit-tap-highlight-color:transparent}
+@media(max-width:600px){.steps,.g3{row-gap:34px}.btn{text-align:center}}
+.price-box .amt{line-height:1.2}.price-box .amt small{white-space:nowrap}
+@media(max-width:600px){.price-box{padding:34px 20px}.price-box .amt small{display:block;margin-top:4px}}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
 <a class="logo" href="#top"><span>V</span>Valsi</a>
-<ul><li><a href="#services">Services</a></li><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#team">Team</a></li><li><a href="#contact">Contact</a></li></ul>
+<button class="menu-btn" aria-label="Open menu" aria-expanded="false" onclick="var o=document.body.classList.toggle('menu-open');this.setAttribute('aria-expanded',o)"><i></i><i></i><i></i></button>
+<ul onclick="document.body.classList.remove('menu-open')"><li><a href="#services">Services</a></li><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#team">Team</a></li><li><a href="#contact">Contact</a></li></ul>
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
